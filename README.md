@@ -25,7 +25,12 @@ The purpose of this assignment is to demonstrate proficiency in Git and GitHub w
   - `v1.0.0`: Initial release with JWT-based authentication feature
   - `v1.1.0`: Minor update with future OAuth integration note
   - `v1.1.1`: Triggered GitHub Actions to test CI/CD workflow
+  - `v1.1.2`: Successfully ran release workflow and verified GitHub Actions execution
 - CI/CD pipeline created using GitHub Actions to respond to published releases
+
+## Bonus - Git Hook
+
+See .png files for screenshots of working git hooks in git bash and nano file.
 
 ---
 
