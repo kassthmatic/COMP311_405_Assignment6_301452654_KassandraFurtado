@@ -1,1 +1,3 @@
 This project is for practicing GitHub workflow.
+
+New Feature: Added JWT-based user authentication module.
