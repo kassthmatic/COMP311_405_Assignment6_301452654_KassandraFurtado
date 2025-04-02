@@ -1,12 +1,21 @@
-name: Trigger on Release
+name: Release with Artifact
 
 on:
   release:
     types: [published]
 
 jobs:
-  say-hello:
+  build-artifact:
     runs-on: ubuntu-latest
     steps:
-      - name: Show release info
-        run: echo "A new release was published"
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Zip source files
+        run: zip -r release-${{ github.ref_name }}.zip .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: source-archive
+          path: release-${{ github.ref_name }}.zip
